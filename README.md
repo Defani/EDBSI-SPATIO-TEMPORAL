@@ -402,6 +402,10 @@ Menampilkan kombinasi spektral untuk menonjolkan fitur yang tidak terlihat dalam
 
 ---
 
+### Output Statistik Nilai Indeks NDBSI
+
+![Chart_INDEKS](CHART.png)
+---
 ## Petunjuk Penggunaan
 
 ### Persyaratan Awal
