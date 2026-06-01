@@ -2,6 +2,8 @@
 
 **oleh : Defani Arman Alfitriansyah**
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1DrIMu5FIGRAwKuoIzHWMqcXddOXVT9Wh?usp=sharing)
+
 <div align="left">
   <a href="https://linkedin.com/in/defaniarmanalfitriansyah"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
   <a href="https://medium.com/@defaniarman"><img src="https://img.shields.io/badge/Medium-12100E?style=flat-square&logo=medium&logoColor=white" alt="Medium" /></a>
@@ -115,7 +117,7 @@ Untuk setiap piksel (x,y):
 |---------|--------------|-----------|
 | earthengine-api | API dasar Google Earth Engine untuk komputasi cloud spasial dan pengaksesan dataset | Google Earth Engine Documentation |
 | geemap | Integrasi GEE dengan Python, pemrosesan koleksi citra, dan eksport peta interaktif | Wu, Q. (2020). JOSS, 5(51), 2305 |
-| cartoee | Modul geemap untuk ekspor peta statis berkualitas publikasi jurnal ilmiah | Markert, K. N. (2019). JOSS, 4(33), 1207 |
+| cartoee | Modul geemap untuk eksport peta statis berkualitas publikasi jurnal ilmiah | Markert, K. N. (2019). JOSS, 4(33), 1207 |
 | cartopy | Proyeksi kartografi spasial dan sistem referensi koordinat (CRS) untuk presisi geografis | Met Office (2013) |
 | matplotlib | Plotting grafik tren temporal 2D, tata letak kanvas, colorbar, dan elemen legenda | Hunter, J. D. (2007). CSE, 9(3), 90-95 |
 | imageio | Pembacaan/penulisan gambar raster, dan pembuatan animasi GIF dari frame PNG tahunan | ImageIO Documentation |
@@ -400,26 +402,23 @@ Menampilkan kombinasi spektral untuk menonjolkan fitur yang tidak terlihat dalam
 
 ---
 
-## Akses dan Reproducibility
+## Petunjuk Penggunaan
 
-### Buka di Google Colab
+### Persyaratan Awal
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1DrIMu5FIGRAwKuoIzHWMqcXddOXVT9Wh?usp=sharing)
-
-**Persyaratan Awal**:
 1. Akun Google (untuk akses Google Colab)
 2. Akun Google Earth Engine (daftar di https://earthengine.google.com/signup/)
 3. Google Cloud Project dengan quota unlimited (rekomendasi)
 
-**Petunjuk Penggunaan Step-by-Step**:
+### Langkah-Langkah Eksekusi
 
-1. Klik badge "Open In Colab" di atas untuk membuka notebook di Google Colab
+1. Klik tombol "Open In Colab" di bagian atas repository untuk membuka notebook
 2. Login dengan akun Google yang sudah terdaftar di Earth Engine
-3. Edit cell authentication dan ubah project ID sesuai GEE project Anda:
+3. Edit cell authentication dan ubah project ID:
    ```python
    ee.Initialize(project='YOUR_GEE_PROJECT_ID')
    ```
-4. Update koordinat area of interest (AOI) pada cell "Penentuan Wilayah Studi":
+4. Update koordinat area of interest (AOI):
    ```python
    roi = ee.Geometry.Polygon([[
        [lon_min, lat_min],
@@ -430,13 +429,14 @@ Menampilkan kombinasi spektral untuk menonjolkan fitur yang tidak terlihat dalam
    ]])
    ```
 5. Jalankan cell satu per satu dari atas ke bawah secara berurutan
-6. Tunggu setiap cell selesai eksekusi sebelum melanjutkan ke cell berikutnya
-7. Output berupa file GIF dan PNG akan otomatis diunduh ke komputer Anda
+6. Tunggu setiap cell selesai eksekusi sebelum melanjutkan
+7. Output berupa file GIF dan PNG akan otomatis diunduh
 
-**Tips Penggunaan**:
-- Untuk AOI besar, tingkatkan durasi timeout execution di menu Runtime > Change runtime type
-- Jika memory error, kurangi resolusi scale parameter atau kurangi jumlah tahun analisis
-- Untuk publikasi, export hasil dengan resolusi dpi tinggi (300 dpi) di menu export
+### Tips Penggunaan
+
+- Untuk AOI besar, tingkatkan durasi timeout di menu Runtime > Change runtime type
+- Jika memory error, kurangi resolusi scale parameter atau tahun analisis
+- Untuk publikasi, export hasil dengan resolusi 300 dpi di menu export
 
 ---
 
@@ -466,8 +466,6 @@ European Space Agency (ESA). Sentinel-2 Level-2A (L2A) Surface Reflectance. Cope
 
 ## Dokumentasi Package Resmi
 
-Berikut adalah link dokumentasi resmi dan resource dari setiap pustaka yang digunakan dalam penelitian ini:
-
 | Package | URL Dokumentasi |
 |---------|-----------------|
 | Google Earth Engine API | https://developers.google.com/earth-engine |
@@ -480,7 +478,7 @@ Berikut adalah link dokumentasi resmi dan resource dari setiap pustaka yang digu
 
 ---
 
-## Fitur Utama Repository
+## Fitur Utama
 
 - Cloud-based Processing: Analisis seluruh data menggunakan Google Earth Engine dengan akses unlimited
 - Multi-temporal Analysis: Data 8 tahun (2019-2026) dengan resolusi spasial 10 meter
@@ -492,7 +490,7 @@ Berikut adalah link dokumentasi resmi dan resource dari setiap pustaka yang digu
 
 ---
 
-## Kontak dan Informasi Lebih Lanjut
+## Kontak dan Informasi
 
 **Defani Arman Alfitriansyah**
 
