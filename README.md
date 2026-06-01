@@ -18,7 +18,7 @@
 
 ---
 
-## Tujuan Penelitian
+## Tujuan 
 
 Analisis ini bertujuan untuk memantau dinamika perubahan luas dan tingkat keterbukaan lahan (tanah terbuka/bare soil) di suatu kawasan kepulauan selama periode 2019–2026.
 
